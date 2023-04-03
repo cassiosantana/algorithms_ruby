@@ -1,7 +1,7 @@
-require 'search/linear'
+require 'algorithms/search/linear'
 
 RSpec.describe Linear do
-  context 'searching for element in an array' do
+  context 'Linear search' do
     it 'element found' do
       arr = [5, 7, 10, 15, 18, 27]
       target_element = 18
