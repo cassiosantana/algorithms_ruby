@@ -10,5 +10,9 @@ RSpec.describe Problems do
     it 'Upper case letters' do
       expect(count.upper).to eq(5)
     end
+
+    it 'Lower case letters' do
+      expect(count.lower).to eq(8)
+    end
   end
 end
