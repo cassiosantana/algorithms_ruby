@@ -7,6 +7,12 @@ module Problems
     def initialize(str)
       @upper = @lower = @number = @special = 0
 
+      character_checker(str)
+    end
+
+    private
+
+    def character_checker(str)
       str.each_char do |chr|
         case chr
         when 'A'..'Z'
