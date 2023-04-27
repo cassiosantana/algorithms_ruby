@@ -18,5 +18,9 @@ RSpec.describe Problems do
     it 'Numbers' do
       expect(count.number).to eq(4)
     end
+
+    it 'Special Characters' do
+      expect(count.special).to eq(2)
+    end
   end
 end
