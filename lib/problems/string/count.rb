@@ -1,13 +1,25 @@
 # frozen_string_literal: true
 
 module Problems
-  # classe que realiza contagem de caracteres
   class Count
-    attr_accessor :upper, :lower, :special, :number
+    attr_reader :upper, :lower, :number, :special
 
     def initialize(str)
-      str.each_char do |char|
+      @upper = @lower = @number = @special = 0
+
+      str.each_char do |chr|
+        case chr
+        when 'A'..'Z'
+          @upper += 1
+        when 'a'..'z'
+          @lower += 1
+        when '0'..'9'
+          @number += 1
+        else
+          @special += 1
+        end
       end
     end
   end
 end
+
