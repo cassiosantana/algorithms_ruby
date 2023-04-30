@@ -10,3 +10,5 @@ gem "rake", "~> 13.0"
 gem "rspec", "~> 3.0"
 
 gem 'rubocop', '~> 1.50', '>= 1.50.2'
+
+gem 'ffaker', '~> 2.21'
