@@ -1,4 +1,4 @@
-require 'problems/string/missing_character'
+require 'problems/string/missing'
 
 RSpec.describe Problems do
   context 'Missing characters' do
