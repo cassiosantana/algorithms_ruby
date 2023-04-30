@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'algorithms/sorting/bubble_sort'
+require 'algorithms/sorting/bubble'
 
 RSpec.describe Algorithms do
   describe 'Bubble Sort' do
