@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Algorithms
+module AlgorithmsRuby
   # binary search
   class BinarySearch
     def search(arr, element, first, last)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Problems
+module AlgorithmsRuby
   # missing character
   class MissingCharacter
     ALPHABET = 'a'..'z'

@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
-require 'algorithms/search/binary'
-
-RSpec.describe Algorithms do
+RSpec.describe AlgorithmsRuby do
   context 'Binary search' do
     it 'Element found' do
       arr = [10, 20, 30, 50, 60, 80, 110, 130, 140, 170]
       element = 50
       last = arr.length - 1
 
-      result = Algorithms::BinarySearch.new.search(arr, element, 0, last)
+      result = AlgorithmsRuby::BinarySearch.new.search(arr, element, 0, last)
 
       expect(result).to eq(3)
     end
@@ -19,7 +17,7 @@ RSpec.describe Algorithms do
       element = 22
       last = arr.length - 1
 
-      result = Algorithms::BinarySearch.new.search(arr, element, 0, last)
+      result = AlgorithmsRuby::BinarySearch.new.search(arr, element, 0, last)
 
       expect(result).to eq(-1)
     end

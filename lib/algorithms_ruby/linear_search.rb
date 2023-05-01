@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Algorithms
+module AlgorithmsRuby
   # linear search
   class LinearSearch
     def search(arr, target_element)

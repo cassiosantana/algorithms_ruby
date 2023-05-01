@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Problems
+module AlgorithmsRuby
   class Count
     attr_reader :upper, :lower, :number, :special
 

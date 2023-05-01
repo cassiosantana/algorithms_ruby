@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Algorithms
+module AlgorithmsRuby
   class BubbleSort
     def sorter(arr)
       n = arr.length
