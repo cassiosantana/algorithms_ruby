@@ -9,6 +9,7 @@ require_relative 'algorithms_ruby/counting_sort'
 require_relative 'algorithms_ruby/version'
 require_relative 'algorithms_ruby/missing_character'
 require_relative 'algorithms_ruby/linear_search'
+require_relative 'algorithms_ruby/find_three'
 
 module AlgorithmsRuby
   class Error < StandardError; end
