@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Algorithms
+module AlgorithmsRuby
   class CountingSort
     def self.order_positive_numbers(arr)
       count = Array.new(arr.max + 1, 0)
