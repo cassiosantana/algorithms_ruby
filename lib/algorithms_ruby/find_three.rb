@@ -12,7 +12,7 @@ module Arrays
         elsif arr[i] > second and arr[i] != first
           third = second
           second = arr[i]
-        elsif arr[i] > third and arr[i] != second and arr[i] != first
+        elsif arr[i] > third and arr[i]
           third = arr[i]
         end
       end
