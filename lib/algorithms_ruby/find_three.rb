@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module AlgorithmsRuby
+module Arrays
   class FindTree
     def self.find(arr)
       first = second = third = 0
