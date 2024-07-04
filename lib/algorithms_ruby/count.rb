@@ -15,11 +15,11 @@ module AlgorithmsRuby
     def character_checker(str)
       str.each_char do |chr|
         case chr
-        when 'A'..'Z'
+        when "A".."Z"
           @upper += 1
-        when 'a'..'z'
+        when "a".."z"
           @lower += 1
-        when '0'..'9'
+        when "0".."9"
           @number += 1
         else
           @special += 1
@@ -28,4 +28,3 @@ module AlgorithmsRuby
     end
   end
 end
-
