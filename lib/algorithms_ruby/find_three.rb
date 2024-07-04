@@ -9,10 +9,10 @@ module Arrays
           third = second
           second = first
           first = arr[i]
-        elsif arr[i] > second and arr[i] != first
+        elsif (arr[i] > second) && (arr[i] != first)
           third = second
           second = arr[i]
-        elsif arr[i] > third and arr[i]
+        elsif (arr[i] > third) && arr[i]
           third = arr[i]
         end
       end
