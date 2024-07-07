@@ -2,26 +2,22 @@
 
 module AlgorithmsRuby
   class BubbleSort
-    def sort(array)
-      length = array.length
+    def sorter(arr)
+      n = arr.length
 
       loop do
         swapped = false
-        (length - 1).times do |i|
-          next if array[i] < array[i + 1]
+        (n - 1).times do |i|
+          next if arr[i] < arr[i + 1]
 
-          swap(array, i, i + 1)
+          temp = arr[i]
+          arr[i] = arr[i + 1]
+          arr[i + 1] = temp
           swapped = true
         end
         break unless swapped
       end
-      array
-    end
-
-    private
-
-    def swap(array, idx1, idx2)
-      array[idx1], array[idx2] = array[idx2], array[idx1]
+      arr
     end
   end
 end
