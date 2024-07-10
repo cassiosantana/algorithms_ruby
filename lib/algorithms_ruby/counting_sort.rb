@@ -9,6 +9,8 @@ module AlgorithmsRuby
     end
 
     def call
+      return @arr unless @arr.length > 1
+
       init_arrays
       store_the_count
       sort_output
