@@ -3,8 +3,8 @@
 RSpec.describe AlgorithmsRuby do
   describe "Counting Sort" do
     context "ordering positive numbers" do
-      let(:unordered_array) { 10.times.map { FFaker::Random.rand(0..9) } }
-      let(:sorted_array) { AlgorithmsRuby::CountingSort.order_positive_numbers(unordered_array) }
+      let(:unordered_array) { Array.new(10) { rand(0..9) } }
+      let(:sorted_array) { AlgorithmsRuby::CountingSort.call(unordered_array) }
 
       it "sorted array" do
         expect(sorted_array).to eq(unordered_array.sort)

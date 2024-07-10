@@ -1,20 +1,40 @@
 # frozen_string_literal: true
 
 module AlgorithmsRuby
-  class CountingSort
-    def self.order_positive_numbers(arr)
-      count = Array.new(arr.max + 1, 0)
-      output = Array.new(arr.length, 0)
-      arr.each { |element| count[element] += 1 }
+  class CountingSort < Base
 
-      output_index = 0
-      count.size.times do |number|
-        count[number].times do
-          output[output_index] = number
-          output_index += 1
-        end
+    def initialize(arr)
+      @arr = arr
+      super
+    end
+
+    def call
+      init_arrays
+      store_the_count
+      sort_output
+      result
+    end
+
+    private
+
+    def init_arrays
+      size = @arr.max + 1
+      @count = Array.new(size, 0)
+      @output = []
+    end
+
+    def store_the_count
+      @arr.each { |element| @count[element] += 1 }
+    end
+
+    def sort_output
+      @count.each_with_index do |quantity, valor|
+        quantity.times { @output << valor }
       end
-      output
+    end
+
+    def result
+      @output
     end
   end
 end
