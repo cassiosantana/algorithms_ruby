@@ -9,11 +9,6 @@ module AlgorithmsRuby
     end
 
     def call
-      sort
-      sorted_array
-    end
-
-    def sort
       loop do
         swapped = false
         (@size - 1).times do |i|
@@ -24,6 +19,8 @@ module AlgorithmsRuby
         end
         break unless swapped
       end
+
+      sorted_array
     end
 
     private
