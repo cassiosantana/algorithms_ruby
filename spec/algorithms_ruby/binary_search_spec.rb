@@ -6,7 +6,7 @@ RSpec.describe AlgorithmsRuby::BinarySearch do
 
     shared_examples "binary search result" do |element, expected_result|
       it "returns #{expected_result} for element #{element}" do
-        result = described_class.run(arr, element)
+        result = described_class.call(arr, element)
         expect(result).to eq(expected_result)
       end
     end

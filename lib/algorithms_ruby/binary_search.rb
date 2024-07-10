@@ -2,27 +2,21 @@
 
 module AlgorithmsRuby
   # binary search
-  class BinarySearch
-
-    def self.run(array, element)
-      new(array, element).search
-    end
-
+  class BinarySearch < Base
     def initialize(array, element)
       @array = array
       @element = element
       @first = 0
       @last = @array.length - 1
       @mid = nil
+      super
     end
 
-    def search
+    def call
       return -1 unless valid_range?
 
-      @mid = calculate_mid
-      return @mid if element_found?
-
-      recursive_search
+      calculate_mid
+      element_found? ? @mid : recursive_search
     end
 
     private
@@ -32,7 +26,7 @@ module AlgorithmsRuby
     end
 
     def calculate_mid
-      (@first + @last) / 2
+      @mid = (@first + @last) / 2
     end
 
     def element_found?
@@ -41,7 +35,7 @@ module AlgorithmsRuby
 
     def recursive_search
       @element < @array[@mid] ? @last = @mid - 1 : @first = @mid + 1
-      search
+      call
     end
   end
 end
