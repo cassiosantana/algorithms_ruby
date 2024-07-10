@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module AlgorithmsRuby
-  class Count < AlgorithmBase
+  class Count < Base
     def initialize(str)
       @str = str
       @upper = @lower = @number = @special = 0
