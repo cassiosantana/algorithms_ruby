@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Implementation of the algorithm found in:
+# https://www.geeksforgeeks.org/find-the-largest-three-elements-in-an-array/
+
 module AlgorithmsRuby
   class FindThree < Base
     def initialize(arr)
@@ -9,12 +12,12 @@ module AlgorithmsRuby
     end
 
     def call
-      return [] if @arr.empty?
+      @arr.each do |element|
+        next if update_all(element)
 
-      @arr.uniq.each do |element|
-        find_first(element)
-        find_second(element)
-        find_third(element)
+        next if update_second_and_third(element)
+
+        update_third(element)
       end
 
       result
@@ -22,25 +25,28 @@ module AlgorithmsRuby
 
     private
 
-    def find_first(element)
+    def update_all(element)
       return unless element > @first
 
       @third = @second
       @second = @first
       @first = element
+      true
     end
 
-    def find_second(element)
+    def update_second_and_third(element)
       return unless element > @second && element != @first
 
       @third = @second
       @second = element
+      true
     end
 
-    def find_third(element)
+    def update_third(element)
       return unless element > @third && element != @first && element != @second
 
       @third = element
+      true
     end
 
     def result
