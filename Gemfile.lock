@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    algorithms_ruby (0.7.1)
+    algorithms_ruby (0.7.2)
 
 GEM
   remote: https://rubygems.org/
@@ -60,6 +60,9 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.50, >= 1.50.2)
+
+RUBY VERSION
+   ruby 3.3.3p89
 
 BUNDLED WITH
    2.2.33
