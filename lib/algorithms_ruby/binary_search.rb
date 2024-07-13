@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
+# Implementation of the algorithm found in:
+# https://www.geeksforgeeks.org/binary-search/
+
 module AlgorithmsRuby
-  # binary search
   class BinarySearch < Base
     def initialize(array, element)
       @array = array

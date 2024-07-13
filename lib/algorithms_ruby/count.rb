@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Implementation of the algorithm found in:
+# https://www.geeksforgeeks.org/count-uppercase-lowercase-special-character-numeric-values/
+
 module AlgorithmsRuby
   class Count < Base
     def initialize(str)

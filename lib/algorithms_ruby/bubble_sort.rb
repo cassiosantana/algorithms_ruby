@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Implementation of the algorithm found in:
+# https://www.geeksforgeeks.org/bubble-sort/
+
 module AlgorithmsRuby
   class BubbleSort < Base
     def initialize(arr)

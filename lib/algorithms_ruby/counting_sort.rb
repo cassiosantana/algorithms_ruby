@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+# Implementation of the algorithm found in:
+# https://www.geeksforgeeks.org/counting-sort/
+
 module AlgorithmsRuby
   class CountingSort < Base
-
     def initialize(arr)
       @arr = arr
       super
