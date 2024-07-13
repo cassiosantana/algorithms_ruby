@@ -1,23 +1,44 @@
 # frozen_string_literal: true
 
-module AlgorithmsRuby
-  class BubbleSort
-    def sorter(arr)
-      n = arr.length
+# Implementation of the algorithm found in:
+# https://www.geeksforgeeks.org/bubble-sort/
 
+module AlgorithmsRuby
+  class BubbleSort < Base
+    def initialize(arr)
+      @arr = arr
+      @size = arr.length
+      super
+    end
+
+    def call
       loop do
         swapped = false
-        (n - 1).times do |i|
-          next if arr[i] < arr[i + 1]
+        (@size - 1).times do |i|
+          next unless need_to_swap?(@arr[i], @arr[i + 1])
 
-          temp = arr[i]
-          arr[i] = arr[i + 1]
-          arr[i + 1] = temp
+          swap(i, i + 1)
           swapped = true
         end
         break unless swapped
       end
-      arr
+
+      sorted_array
+    end
+
+    private
+
+    def need_to_swap?(current_element, next_element)
+      current_element > next_element
+    end
+
+    def swap(current_index, next_index)
+      @arr[current_index], @arr[next_index] = @arr[next_index], @arr[current_index]
+    end
+
+    def sorted_array
+      @arr.dup
     end
   end
 end
+

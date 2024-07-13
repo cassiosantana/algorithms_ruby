@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Study of algorithms in the Ruby language"
   spec.homepage = "https://github.com/cassiosantana/algorithms_ruby"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.0.5"
+  spec.required_ruby_version = ">= 3.3.3"
 
   spec.metadata["allowed_push_host"] = "https://github.com/cassiosantana/algorithms_ruby"
 

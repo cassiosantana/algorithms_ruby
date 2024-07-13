@@ -1,31 +1,37 @@
 # frozen_string_literal: true
 
+# Implementation of the algorithm found in:
+# https://www.geeksforgeeks.org/count-uppercase-lowercase-special-character-numeric-values/
+
 module AlgorithmsRuby
-  class Count
-    attr_reader :upper, :lower, :number, :special
-
+  class Count < Base
     def initialize(str)
+      @str = str
       @upper = @lower = @number = @special = 0
+      super
+    end
 
-      character_checker(str)
+    def call
+      calculate
+      result
     end
 
     private
 
-    def character_checker(str)
-      str.each_char do |chr|
-        case chr
-        when 'A'..'Z'
-          @upper += 1
-        when 'a'..'z'
-          @lower += 1
-        when '0'..'9'
-          @number += 1
-        else
-          @special += 1
-        end
-      end
+    def calculate
+      @upper = @str.count("A-Z")
+      @lower = @str.count("a-z")
+      @number = @str.count("0-9")
+      @special = @str.size - @upper - @lower - @number
+    end
+
+    def result
+      {
+        upper: @upper,
+        lower: @lower,
+        number: @number,
+        special: @special
+      }
     end
   end
 end
-

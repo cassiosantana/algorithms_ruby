@@ -1,33 +1,23 @@
 # frozen_string_literal: true
 
-RSpec.describe AlgorithmsRuby do
-  context 'Linear search' do
-    it 'element found' do
-      arr = [5, 7, 10, 15, 18, 27]
-      target_element = 18
-      result = AlgorithmsRuby::LinearSearch.new.search(arr, target_element)
-      expect(result).to be >= 0
+RSpec.describe AlgorithmsRuby::LinearSearch do
+  context "Linear search" do
+    subject { described_class.call(arr, key) }
+    let(:arr) { [10, 50, 30, 70, 80, 20, 90, 40] }
+    let(:key) { 30 }
+
+    context "when the array contains the key" do
+      it { expect(subject).to eq(2) }
     end
 
-    it 'element found at index 4' do
-      arr = [5, 7, 10, 15, 18, 27]
-      target_element = 18
-      result = AlgorithmsRuby::LinearSearch.new.search(arr, target_element)
-      expect(result).to eq(4)
+    context "when the array does not contains the key" do
+      let(:key) { 100 }
+      it { expect(subject).to eq(-1) }
     end
 
-    it 'element not found' do
-      arr = [5, 7, 10, 15, 18, 27]
-      target_element = 200
-      result = AlgorithmsRuby::LinearSearch.new.search(arr, target_element)
-      expect(result).to eq(-1)
-    end
-
-    it 'empty list' do
-      arr = []
-      target_element = 5
-      result = AlgorithmsRuby::LinearSearch.new.search(arr, target_element)
-      expect(result).to eq(-1)
+    context "when array is empty" do
+      let(:arr) { [] }
+      it { expect(subject).to eq(-1) }
     end
   end
 end
