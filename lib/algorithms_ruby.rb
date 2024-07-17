@@ -3,7 +3,6 @@
 require "ffaker"
 
 require_relative "algorithms_ruby/base"
-require_relative "algorithms_ruby/minimum_sum"
 require_relative "algorithms_ruby/binary_search"
 require_relative "algorithms_ruby/bubble_sort"
 require_relative "algorithms_ruby/count"
