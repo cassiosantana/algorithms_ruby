@@ -7,26 +7,21 @@ module AlgorithmsRuby
   class MinimumSum < Base
     def initialize(arr)
       @arr = arr
-      @minimum_repetitions = []
       super
     end
 
     def call
-      verify_adjacent
-      result
+      minimum_value * repetitions
     end
 
     private
 
-    def verify_adjacent
-      @min = @arr.min
-      @arr.delete_if do |element|
-        @minimum_repetitions << @min if element > @min
-      end
+    def minimum_value
+      @arr.min
     end
 
-    def result
-      @minimum_repetitions.sum
+    def repetitions
+      @arr.size - 1
     end
   end
 end
